@@ -23,39 +23,61 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
-        <div class="container">
-            <nav class="navbar navbar-expand-xl p-0">
-                <div class="navbar-brand">
-                    <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
-                        <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                        </a>
-                    <?php else : ?>
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
-                    <?php endif; ?>
+	
+	
+	<header id="masthead" class="d-flex align-items-stretch bd-highlight <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+      <div>
+	  <div class ="container">
+            <nav class="">
 
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<?php the_widget( 'WP_Widget_Search' ); ?>
+<p class ="text-label"> Tematy</p>
 
                 <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'primary',
                 'container'       => 'div',
                 'container_id'    => 'main-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
+                'container_class' => '',
                 'menu_id'         => false,
-                'menu_class'      => 'navbar-nav',
+                'menu_class'      => '',
                 'depth'           => 3,
-                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker()
+
                 ));
                 ?>
 
+
+
             </nav>
-        </div>
+			
+			<div class="sub-menu">
+			<p class ="text-label"> Subskrybuj</p>
+			<input >
+			
+			<a>privacy policy</a><br>
+			<a>kontakt</a><br>
+			<a>współpraca</a><br>
+			
+			
+			
+			<div class="social-ico">
+			<i class="fab fa-facebook-f"></i>
+			<i class="fab fa-instagram"></i>
+			<i class="fab fa-pinterest-p"></i>
+			</div>
+			
+			</div>
+			
+			
+			
+			</div>
+			
+			</div>
+			
+		<div class ="main-image">
+	
+		</div>
+		
 	</header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>
