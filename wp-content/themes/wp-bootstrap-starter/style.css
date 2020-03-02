@@ -1292,3 +1292,38 @@ body:not(.theme-preset-active) footer#colophon{
 
 
 
+
+}
+	padding:0;
+	margin-right:20px;
+
+	text-align:center;
+header#masthead{
+}
+#masthead .sub-menu{
+	
+	background:url("/wp-content/uploads/img/mainbg.jpg");
+
+.main-image{
+
+	width:100%;
+}
+	
+.widget_search{
+	margin-left:20px;
+	margin-top:30px;
+}
+#masthead p.text-label{
+	text-align:center;
+}
+
+#main-nav ul {
+	padding:0;
+	list-style:none;
+}
+	text-align:center;
+
+#main-nav ul li a {
+	color:#7e7e7e;
+	text-transform:uppercase;
+}
