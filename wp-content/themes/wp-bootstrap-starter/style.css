@@ -1104,6 +1104,11 @@ body:not(.theme-preset-active) footer#colophon {
 		font-family: Exo2-Bold;
 		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/Exo2-Bold.ttf);
 	}
+	
+	@font-face {
+		font-family: Playfair-Italic;
+		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/PlayfairDisplay-Italic.ttf);
+	}
 
 
 
@@ -1158,6 +1163,27 @@ body:not(.theme-preset-active) footer#colophon{
 	font-family:Montserrat-Medium;
 	text-align:center;
 }
+
+
+.paragraph h2{
+	font-family:Montserrat-Bold;
+	text-align: center;
+	font-size: 18px;
+	color:#7e7e7e
+
+	
+}
+
+.paragraph p{
+	font-family:Playfair-Italic;
+    text-align: justify;
+    text-align-last: center;
+	font-size: 14px;
+	color:#8c8c8c;
+
+	
+}
+
 
 
 
