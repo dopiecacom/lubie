@@ -1062,7 +1062,7 @@ body:not(.theme-preset-active) footer#colophon {
 
 
 
-
+	/* ############################################## FONTS ################################################ */
 
 	
 	@font-face {
@@ -1110,24 +1110,24 @@ body:not(.theme-preset-active) footer#colophon {
 		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/PlayfairDisplay-Italic.ttf);
 	}
 
+	@font-face {
+		font-family: Myriard-Regular;
+		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/MYRIADPRO-COND.OTF);
+	}
+
+	@font-face {
+		font-family: Myriard-Bold;
+		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/MYRIADPRO-BOLDCOND.OTF);
+	}
 
 
 
-.site-info p{
-	text-align: center;
-	font-family: Montserrat-Bold;
-	font-size: 18px;
-	color: #2a2927;
-	line-height:1.2px;
-	letter-spacing: 3px;
-}
-
-body:not(.theme-preset-active) footer#colophon{
 	
-	background-color:#ebd6c5;
-}
+	
+	
+	/* ############################################## FOOTER ################################################ */
 
-
+	
 #footer-social a {
     margin: 9px;
 }
@@ -1147,21 +1147,71 @@ body:not(.theme-preset-active) footer#colophon{
     width: 115px;
     margin-top: 75px;
     margin-bottom: 65px;
+}	
+	
+body:not(.theme-preset-active) footer#colophon{
+	
+	background-color:#ebd6c5;
+}	
+	
+.site-info p{
+	text-align: center;
+	font-family: Montserrat-Bold;
+	font-size: 18px;
+	color: #2a2927;
+	line-height:1.2px;
+	letter-spacing: 3px;
 }
 
 
+
+
+
+
+
+
+
+	/* ############################################## POST ################################################ */
 
 
 .post-title{
 	font-family:Montserrat-Bold;
 	text-transform: uppercase;
 	text-align:center;
+	color: #2a2927;
 	
 }
 
 .post-text{
-	font-family:Montserrat-Medium;
-	text-align:center;
+		text-align: center;
+}
+
+
+.post-text p{
+	font-family:Myriard-Regular;
+	line-height:30px;
+	color:#2a2927;
+	text-align: justify;
+    text-align-last: center;
+	padding-right: 20px;
+    padding-left: 20px;
+}
+
+.post-text a{
+	font-family: Myriard-Bold;
+	color:#b07150;
+	text-decoration: underline;
+		
+}
+
+
+
+
+	/* ############################################## PARAGRAPH ################################################ */
+
+
+.paragraph {
+    margin-top: 160px;
 }
 
 
@@ -1169,7 +1219,9 @@ body:not(.theme-preset-active) footer#colophon{
 	font-family:Montserrat-Bold;
 	text-align: center;
 	font-size: 18px;
-	color:#7e7e7e
+	color:#7e7e7e;
+	margin-bottom:80px;
+	letter-spacing: 7px;
 
 	
 }
@@ -1184,6 +1236,58 @@ body:not(.theme-preset-active) footer#colophon{
 	
 }
 
+
+
+
+	/* ############################################## PARAGRAPH JEDZENIE ################################################ */
+
+	
+	
+	
+.kafel-jedzenie{
+	color:#ebd6c5;
+	padding-top:10%;
+	padding-bottom:10%;
+	padding-left:32%;
+	padding-right:32%;
+	background-color:#2a2927;
+	margin-top:150px;	
+}
+
+
+.kafel-jedzenie p{
+	color:#ebd6c5;
+
+}
+
+.kafel-jedzenie h2{
+	color:#ebd6c5;
+	margin-bottom:60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	/* ############################################## INSTAGRAM ################################################ */
+
+	
+#instagram p{
+	margin-top:100px;
+	margin-bottom:10px;
+	font-family: Myriard-Regular;
+	font-size:15px;
+	color:#2a2927;
+	text-align:center;
+	
+}
 
 
 

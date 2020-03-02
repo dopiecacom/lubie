@@ -58,23 +58,69 @@ wp_reset_postdata();
 		
 				
 		<div class="container">
+		<div class="paragraph">
 		<div class="row">
 		<div class="col-md-4">	
-		<div class="paragraph">
+
 		<h2>MODA</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin convallis felis nec pellentesque. Nulla ut turpis eros. Maecenas in pretium risus. Vestibulum in pharetra tortor. Vestibulum porttitor consequat metus, in vehicula risus. Maecenas nulla eros, convallis eget sem eu, lacinia auctor mauris. Nunc tincidunt hendrerit velit, ut porta ante fermentum non. Fusce pulvinar sodales faucibus. Morbi euismod nisi nulla, vitae euismod elit laoreet sit amet.</p>
 		
 		</div>
-		</div>
+	
 		<div class="col-md-4 offset-md-4">	
 		<div class="paragraph-photo">
 		<img src="http://lubie.com.pl/wp-content/uploads/2020/02/sample.jpg">
 		
 		</div>
 		</div>
+		</div>
+		</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="container">
+		<div class="paragraph">
+		<div class="row">
+		<div id="">
+		</div>
+		<div class="col-md-6">	
+		<div class="paragraph-photo">
+		<img src="http://lubie.com.pl/wp-content/uploads/2020/02/sample.jpg" style="width:560px;height:520px;">
+		
+		</div>
+		</div>		
+		
+		
+		<div class="col-md-6">	
+		<div class="kafel-jedzenie">
+		<h2>JEDZENIE</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin convallis felis nec pellentesque. Nulla ut turpis eros. Maecenas in pretium risus. Vestibulum in pharetra tortor. Vestibulum porttitor consequat metus, in vehicula risus. Maecenas nulla eros, convallis eget sem eu, lacinia auctor mauris.</p>
+		</div>
+		</div>
+	
+
 		
 		</div>
 		</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -87,9 +133,11 @@ wp_reset_postdata();
 		<div class="row">
 		<div class="col-md-12">	
 		
-		
+		<div id="instagram">
+		<p>INSTAGRAM</p>
 		<?php echo do_shortcode('[instagram-feed user="lubietocompl"]'); ?>
 		
+		</div>
 		</div>
 		</div>
 		</div>

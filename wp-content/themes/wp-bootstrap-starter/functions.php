@@ -300,3 +300,28 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// #######################################
+// ########### CUSTOM FUNCTIONS ##########
+// #######################################
+
+
+
+
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+return 22;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
