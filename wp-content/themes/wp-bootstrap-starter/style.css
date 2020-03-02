@@ -1291,26 +1291,28 @@ body:not(.theme-preset-active) footer#colophon{
 
 
 
+	/* ############################################## HEADER ################################################ */
 
 
-}
-	padding:0;
-	margin-right:20px;
 
-	text-align:center;
 header#masthead{
+	padding:0;
 }
+
 #masthead .sub-menu{
+	text-align:center;
 	
-	background:url("/wp-content/uploads/img/mainbg.jpg");
+}
+
 
 .main-image{
-
+	background:url("/wp-content/uploads/img/mainbg.jpg");
 	width:100%;
 }
 	
 .widget_search{
 	margin-left:20px;
+	margin-right:20px;
 	margin-top:30px;
 }
 #masthead p.text-label{
@@ -1320,8 +1322,8 @@ header#masthead{
 #main-nav ul {
 	padding:0;
 	list-style:none;
-}
 	text-align:center;
+}
 
 #main-nav ul li a {
 	color:#7e7e7e;
