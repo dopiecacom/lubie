@@ -162,57 +162,7 @@ wp_reset_postdata();
 		
 		
 		
-		<div class="container">
-<div class="row">
-<?php $the_query = new WP_Query( 'posts_per_page=12' ); ?>
- 
 
-<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-<div class="col-md-4">
-<h3><?php the_category();?></h3>
-<?php the_post_thumbnail(); ?>
-<div class="post-title">
-<h2><?php the_title();?></h2>
-</div>
-<div class="post-text">
-<?php the_excerpt(__('(more…)')); ?>
-<a href="<?php the_permalink() ?>">CZYTAJ WIĘCEJ</a>
-</div>
-</div>
-<?php 
-endwhile;
-wp_reset_postdata();
-?>
-
-		</div>
-		</div>
-		
-		
-		
-		
-		
-		<!-- ####################################################################################### -->
-		
-		
-		
-		
-		
-		
-		
-		
-		<div class="container">
-		<div class="row">
-		<div class="col-md-12">	
-		
-		<div id="instagram">
-		<p>INSTAGRAM</p>
-		<?php echo do_shortcode('[instagram-feed user="lubietocompl"]'); ?>
-		
-		</div>
-		</div>
-		</div>
-		</div>
-		
 		
 		
 

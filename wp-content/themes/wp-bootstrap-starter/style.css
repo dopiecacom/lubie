@@ -1111,13 +1111,28 @@ body:not(.theme-preset-active) footer#colophon {
 	}
 
 	@font-face {
+		font-family: MyriardPro-Regular;
+		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/MYRIADPRO-REGULAR.OTF);
+	}
+			
+	@font-face {
+		font-family: MyriardPro-Light;
+		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/MYRIADPRO-LIGHT.OTF);
+	}
+		
+	@font-face {
 		font-family: Myriard-Regular;
 		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/MYRIADPRO-COND.OTF);
 	}
-
+	
 	@font-face {
 		font-family: Myriard-Bold;
 		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/MYRIADPRO-BOLDCOND.OTF);
+	}
+
+	@font-face {
+		font-family: Alleana;
+		src: url(/wp-content/themes/wp-bootstrap-starter/inc/assets/fonts/AlleanaScript.ttf);
 	}
 
 
@@ -1149,10 +1164,14 @@ body:not(.theme-preset-active) footer#colophon {
     margin-bottom: 65px;
 }	
 	
-body:not(.theme-preset-active) footer#colophon{
+#footer-lower-section{
 	
 	background-color:#ebd6c5;
 }	
+
+#footer-upper-section{
+	background-color:white;
+}
 	
 .site-info p{
 	text-align: center;
@@ -1166,60 +1185,76 @@ body:not(.theme-preset-active) footer#colophon{
 
 
 
-
-
-
-
-
 	/* ############################################## POST ################################################ */
 
 
-.post-title h2{
+	.posts .row{
+		margin-bottom:100px;
+	}
+	
+	.posts h1{
+		font-family:Montserrat-Bold;
+		font-size:18px;
+		color:#2a2927;
+		text-align:center;
+		letter-spacing: 8px;
+		margin-top: 0;
+		text-transform: uppercase;
+	}
+	
+	.post-title h2{
 	font-family:Montserrat-Bold;
 	text-transform: uppercase;
 	text-align:center;
 	color: #2a2927;
 	font-size:18px;
 	letter-spacing: 3px;
-}
+	}
 
-.post-text{
-		text-align: center;
-}
+	.post-text{
+			text-align: center;
+	}
 
+	.post-text p{
+		font-family:Myriard-Regular;
+		line-height:30px;
+		color:#2a2927;
+		text-align: justify;
+		text-align-last: center;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
 
-.post-text p{
-	font-family:Myriard-Regular;
-	line-height:30px;
-	color:#2a2927;
-	text-align: justify;
-    text-align-last: center;
-	padding-right: 20px;
-    padding-left: 20px;
-}
-
-.post-text a{
-	font-family: Myriard-Bold;
-	color:#b07150;
-	text-decoration: underline;
-		
-}
-
-
-ul.post-categories{
-	list-style:none;
-	text-align:center;
-}
-
-.post-categories > li > a{
-	color:#2a2927;
-	font-size:15px;
-	font-family:Myriard-Regular;
-	text-transform:uppercase;
-}
+	.post-text a{
+		font-family: Myriard-Bold;
+		color:#b07150;
+		text-decoration: underline;
+			
+	}
+	
+	
+	.post-text a:visited {
+		color:#b07150!important;
+	}
+	
 
 
+	ul.post-categories{
+		list-style:none;
+		text-align:center;
+	}
 
+	.post-categories > li > a{
+		color:#2a2927;
+		font-size:15px;
+		font-family:Myriard-Regular;
+		text-transform:uppercase;
+	}
+
+	
+	#czytaj-wiecej{
+		color:#b07150;
+	}
 
 
 	/* ############################################## PARAGRAPH ################################################ */
@@ -1344,6 +1379,10 @@ ul.post-categories{
 	
 }
 
+#sb_instagram{
+	margin-bottom:50px;
+}
+
 
 
 	/* ############################################## HEADER ################################################ */
@@ -1393,7 +1432,145 @@ header#masthead{
 
 
 
+	/* ############################################## O NAS ################################################ */
 
+
+	
+#o-nas{
+	text-align:center;
+}
+
+#o-nas h6{
+	font-family: Myriard-Bold;
+    color: #b07150;
+	font-size:15px; 
+	text-decoration: underline;
+}
+
+#o-nas h1{
+	font-family: MyriardPro-Regular;
+    color: #ebd6c5;
+	font-size:115px; 
+	letter-spacing: 29px;
+	margin-top:100px;
+	margin-bottom:100px;
+	font-weight: 100;
+}
+
+#o-nas p{
+	font-size:19px;
+	font-family: MyriardPro-Regular;
+	text-align: justify;
+	text-align-last: center;
+	color:black;
+	
+}
+
+#o-nas #podpis{
+	font-family: Alleana;
+	font-size:48px;
+	margin-bottom: 25px;
+}
+
+
+
+
+
+.o-nas-paragraph {
+margin-bottom: 80px;
+    margin-top: 80px;
+	text-align:center;
+	
+}
+
+.o-nas-paragraph .row .col-md-4{
+	margin-top: auto;
+    margin-bottom: auto;
+	
+}
+
+
+.o-nas-paragraph h2{
+	font-family:Montserrat-Bold;
+	text-align: center;
+	font-size: 18px;
+	color:#2a2927;
+	margin-bottom:60px;
+	letter-spacing: 7px;
+	line-height: 30px;
+
+	
+}
+
+.o-nas-paragraph p{
+	font-family:Myriard-Regular;
+    text-align: justify;
+    text-align-last: center;
+	font-size: 15px;
+	color:#2a2927;
+	    line-height: 32px;
+		margin-bottom:40px;
+
+	
+}
+
+
+
+.o-nas-paragraph a{
+    font-family: Myriard-Bold;
+	font-size:15px;
+    color: #b07150;
+    text-decoration: underline;
+	
+}
+
+
+
+
+
+
+	/* ############################################## KATEGORIA ################################################ */
+
+
+
+#kategoria .post-categories > li > a{
+	font-family: MyriardPro-Light;
+    color: #ebd6c5;
+	font-size:115px; 
+	letter-spacing: 29px;
+	font-weight: 100;
+}
+
+#kategoria h1{
+	margin-top:100px;
+	margin-bottom:110px;
+}
+
+#kategoria img{
+	width: 100%;
+}
+
+#kategoria .row{
+	margin-bottom:80px;
+}
+
+
+#kategoria .kategoria-content{
+	margin: auto;
+}
+
+#kategoria .kategoria-content p{
+	    padding-left: 13%;
+    padding-right: 13%;
+}
+
+#kategoria h6{
+	font-family: Myriard-Bold;
+    color: #b07150;
+    font-size: 15px;
+    text-decoration: underline;
+	text-align:center;
+}
 
 
 
@@ -1408,4 +1585,23 @@ header#masthead{
 
 #primary{
 	padding:0;
+}
+
+.misha_loadmore{
+	background-color: #ddd;
+	border-radius: 2px;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 800;
+	letter-spacing:1px;
+	cursor:pointer;
+	text-transform: uppercase;
+	padding: 10px 0;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;  
+}
+.misha_loadmore:hover{
+	background-color: #767676;
+	color: #fff;
 }

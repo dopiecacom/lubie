@@ -16,6 +16,99 @@
 	</div><!-- #content -->
     <?php get_template_part( 'footer-widget' ); ?>
 	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
+	
+	
+	
+	<div id="footer-upper-section">
+	
+	
+	
+	
+	<div class="container">
+	<div class="posts">
+	
+	<h1>Te artykuły mogą być dla Ciebie</h1>
+	
+	
+		<?php $the_query = new WP_Query( 'posts_per_page=12' ); 
+		$licznik = 0;?>
+		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+		<?php 	if ($licznik%3==0){ ?>
+		<div class="row">
+			<?php } ?>
+			<div class="col-md-4">
+				<h3><?php the_category();?></h3>
+				<?php the_post_thumbnail(); ?>
+				<div class="post-title">
+				<h2><?php the_title();?></h2>
+				</div>
+				<div class="post-text">
+				<?php the_excerpt(__('(more…)')); ?>
+				<span id="czytaj-wiecej"><a href="<?php the_permalink() ?>">CZYTAJ WIĘCEJ</a></span>
+				</div>
+			</div>
+			<?php 
+			if ($licznik%3==2){ ?>
+		 </div>
+		<?php } ?>
+		<?php $licznik++;
+		endwhile;
+		
+		
+		
+	
+//global $wp_query; // you can remove this line if everything works for you
+ 
+// don't display the button if there are not enough posts
+//if (  $wp_query->max_num_pages > 1 )
+	//echo '<div class="misha_loadmore">More posts</div>'; // you can use <a> as well
+?>
+		
+		
+		
+		<?php
+
+		wp_reset_postdata();
+		?>
+	</div>
+	</div>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+
+		
+		
+		
+		<div class="container">
+		<div class="row">
+		<div class="col-md-12">	
+		
+		<div id="instagram">
+		<p>INSTAGRAM</p>
+		<?php echo do_shortcode('[instagram-feed user="lubietocompl"]'); ?>
+		
+		</div>
+		</div>
+		</div>
+		</div>
+		
+	
+	</div>
+	
+	
+	
+	
+	
+	<div id="footer-lower-section">
+	
+	
 		<div class="container pt-3 pb-3">
             <div class="site-info">
 			
@@ -39,6 +132,8 @@
 
             </div><!-- close .site-info -->
 		</div>
+		
+	</div>
 	</footer><!-- #colophon -->
 <?php endif; ?>
 </div><!-- #page -->
