@@ -336,7 +336,7 @@ function misha_my_load_more_scripts() {
 	wp_enqueue_script('jquery');
  
 	// register our main script but do not enqueue it yet
-	wp_register_script( 'my_loadmore', '/wp-content/themes/wp-bootstrap-starter/myloadmore.js', array('jquery') );
+	wp_register_script( 'my_loadmore', '/wp-content/themes/wp-bootstrap-starter/inc/assets/js/myloadmore.js', array('jquery') );
  
 	// now the most interesting part
 	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
