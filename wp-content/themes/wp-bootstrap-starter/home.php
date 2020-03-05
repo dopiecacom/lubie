@@ -9,6 +9,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		
+
 		
 <div class="container">
 <div class="row">
@@ -55,7 +56,7 @@ wp_reset_postdata();
 	
 		<div class="col-md-6 offset-md-2">	
 		<div class="paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/p1.jpg">
+		<img src="/wp-content/uploads/img/p1.jpg">
 		
 		</div>
 		</div>
@@ -77,7 +78,7 @@ wp_reset_postdata();
 	
 		<div class="col-md-6">	
 		<div class="paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/p2.jpg">
+		<img src="/wp-content/uploads/img/p2.jpg">
 		
 		</div>
 		</div>
@@ -111,7 +112,7 @@ wp_reset_postdata();
 	
 		<div class="col-md-6 offset-md-2">	
 		<div class="paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/p3.jpg">
+		<img src="/wp-content/uploads/img/p3.jpg">
 		
 		</div>
 		</div>
@@ -131,7 +132,7 @@ wp_reset_postdata();
 		<div class="row">
 		<div class="col-md-6 col-sm-12">	
 		<div class="paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/kanapka.jpg">
+		<img src="/wp-content/uploads/img/kanapka.jpg">
 		
 		</div>
 		</div>		

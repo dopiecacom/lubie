@@ -13,11 +13,11 @@ jQuery(function($){ // use jQuery code inside this to avoid "$ is not defined" e
 			data : data,
 			type : 'POST',
 			beforeSend : function ( xhr ) {
-				button.text('Loading...'); // change the button text, you can also add a preloader image
+				button.text('Ładowanie...'); // change the button text, you can also add a preloader image
 			},
 			success : function( data ){
 				if( data ) { 
-					button.text( 'More posts' ).prev().before(data); // insert new posts
+					button.text( 'WIĘCEJ' ).prev().before(data); // insert new posts
 					misha_loadmore_params.current_page++;
  
 					if ( misha_loadmore_params.current_page == misha_loadmore_params.max_page ) 

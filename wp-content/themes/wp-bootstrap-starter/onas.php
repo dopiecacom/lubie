@@ -55,7 +55,7 @@ To dopiero początek.</p>
 	
 		<div class="col-md-4">	
 		<div class="o-nas-paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/p1.jpg">
+		<img src="/wp-content/uploads/img/o_nas.jpg">
 		
 		</div>
 		</div>
@@ -86,7 +86,7 @@ To dopiero początek.</p>
 	
 		<div class="col-md-4">	
 		<div class="o-nas-paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/p1.jpg">
+		<img src="/wp-content/uploads/img/o_nas-2.jpg">
 		
 		</div>
 		</div>
@@ -101,7 +101,7 @@ To dopiero początek.</p>
 		
 				<div class="col-md-4">	
 		<div class="o-nas-paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/p1.jpg">
+		<img src="/wp-content/uploads/img/o_nas-3.jpg">
 		
 		</div>
 		</div>
@@ -124,7 +124,7 @@ To dopiero początek.</p>
 	
 		<div class="col-md-8">	
 		<div class="o-nas-paragraph-photo">
-		<img src="http://lubie.com.pl/wp-content/uploads/img/p1.jpg">
+		<img src="/wp-content/uploads/img/o_nas-4.jpg">
 		
 		</div>
 		</div>

@@ -344,7 +344,7 @@ function misha_my_load_more_scripts() {
 	wp_localize_script( 'my_loadmore', 'misha_loadmore_params', array(
 		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
 		'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
-		'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+		'current_page' => get_query_var( 'page' ) ? get_query_var('page') : 1,
 		'max_page' => $wp_query->max_num_pages
 	) );
  
@@ -374,7 +374,7 @@ function misha_loadmore_ajax_handler(){
 			//get_template_part( 'template-parts/post/content', get_post_format() );
 			//get_template_part( 'archive', get_post_format() );
 			// for the test purposes comment the line above and uncomment the below one
-			//the_title();
+			the_title();
 			
 			
 			
@@ -427,6 +427,25 @@ function misha_loadmore_ajax_handler(){
 add_action('wp_ajax_loadmore', 'misha_loadmore_ajax_handler'); // wp_ajax_{action}
 add_action('wp_ajax_nopriv_loadmore', 'misha_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
 
-
+function wp_corenavi() {  
+  global $wp_query, $wp_rewrite;  
+  $pages = '';  
+  $max = $wp_query->max_num_pages;  
+  if (!$current = get_query_var('page')) $current = 1;  
+  $a['base'] = str_replace(999999999, '%#%', get_pagenum_link(999999999));  
+  $a['total'] = $max;  
+  $a['current'] = $current;  
+  
+  $total = 1; //1 - display the text "Page N of N", 0 - not display  
+  $a['mid_size'] = 5; //how many links to show on the left and right of the current  
+  $a['end_size'] = 1; //how many links to show in the beginning and end  
+  $a['prev_text'] = '&laquo; Previous'; //text of the "Previous page" link  
+  $a['next_text'] = 'Next &raquo;'; //text of the "Next page" link  
+  
+  if ($max > 1) echo '<div class="navigation">';  
+  if ($total == 1 && $max > 1) $pages = '<span class="pages">Page ' . $current . ' of ' . $max . '</span>'."\r\n";  
+  echo $pages . paginate_links($a);  
+  if ($max > 1) echo '</div>';  
+}  
 
 

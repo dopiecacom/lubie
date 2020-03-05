@@ -29,11 +29,36 @@
 	
 	<h1>Te artykuły mogą być dla Ciebie</h1>
 	
+
 	
-		<?php $the_query = new WP_Query( 'posts_per_page=12' ); 
-		$licznik = 0;?>
-		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-		<?php 	if ($licznik%3==0){ ?>
+	
+	
+	
+<?php
+   if ( get_query_var('paged') ) { $paged = get_query_var('paged'); }
+    elseif ( get_query_var('page') ) { $paged = get_query_var('page'); }
+    else { $paged = 1; }
+$args = array(
+    'post_type'=>'post', // Your post type name
+    'posts_per_page' => 3,
+	'cat' => 0,
+    'paged' => $paged,
+);
+
+$loop = new WP_Query( $args );
+            // Pagination fix
+            $temp_query = $wp_query;
+            $wp_query   = NULL;
+            $wp_query   = $loop;
+if ( $loop->have_posts() ) {
+    while ( $loop->have_posts() ) : $loop->the_post();
+    ?>
+
+	
+	
+	
+	
+			<?php 	if ($licznik%3==0){ ?>
 		<div class="row">
 			<?php } ?>
 			<div class="col-md-4">
@@ -51,27 +76,73 @@
 			if ($licznik%3==2){ ?>
 		 </div>
 		<?php } ?>
-		<?php $licznik++;
-		endwhile;
-		
-		
-		
+		<?php $licznik++; ?>
 	
-//global $wp_query; // you can remove this line if everything works for you
- 
-// don't display the button if there are not enough posts
-//if (  $wp_query->max_num_pages > 1 )
-	//echo '<div class="misha_loadmore">More posts</div>'; // you can use <a> as well
-?>
-		
-		
-		
-		<?php
+	
+	
+	
+	
+	
+	
+	
+	
+    <?php
+    endwhile;
 
-		wp_reset_postdata();
-		?>
+    $total_pages = $loop->max_num_pages;
+
+    if ($total_pages > 1){
+
+        $current_page = max(1, get_query_var('paged'));
+?><div id="pagination"><?php
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => '/page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+            'prev_text'    => __('« poprzednia strona'),
+            'next_text'    => __('następna strona »'),
+        ));
+		?></div><?php
+    }    
+}
+
+	//if (  $wp_query->max_num_pages > 1 )
+	//echo '<div class="misha_loadmore">WIĘCEJ</div>'; 
+
+
+
+//global $wp_query;
+ 
+
+wp_reset_postdata();
+            // Reset main query object
+            $wp_query = NULL;
+            $wp_query = $temp_query;
+?>
+
+	
+	
+	
 	</div>
 	</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
