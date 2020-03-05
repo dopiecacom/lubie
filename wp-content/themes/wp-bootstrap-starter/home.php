@@ -13,11 +13,13 @@ get_header(); ?>
 		
 <div class="container">
 <div class="row">
+<!-- <div class="top-homepage-posts"> -->
+
 <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
  
 
 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-<div class="col-md-4">
+<div class="col-md-4 top-homepage-posts">
 <h3><?php the_category();?></h3>
 <?php the_post_thumbnail(); ?>
 <div class="post-title">
@@ -33,6 +35,7 @@ endwhile;
 wp_reset_postdata();
 ?>
 
+		<!-- </div> -->
 		</div>
 		</div>
 		
