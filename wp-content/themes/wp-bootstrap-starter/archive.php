@@ -9,31 +9,79 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-lg-8">
+	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		
+		
+		
+		<div class="container">
+		<div class="row">
+		<div class="col-md-12">
+		<div id="kategoria">
+		
+		
+		<h6>WRÓĆ DO STRONY GŁÓWNEJ</h6>
+		
+		
+		
+		
 		<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
+					//the_archive_title( '<h1 class="page-title">', '</h1>' );
+					//the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
+					<h1><?php the_category();?></h1>
+				
 			</header><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
+			?>
+			
+		<div class="row">
+		<div class="col-md-7">
+			<?php the_post_thumbnail(); ?>
+		</div>
+		
+		<div class="col-md-5 kategoria-content">
+			<div class="post-title">
+			<h2><?php the_title();?></h2>
+			</div>
+			<div class="post-text">
+			<?php the_excerpt(__('(more…)')); ?>
+			<a href="<?php the_permalink() ?>">CZYTAJ WIĘCEJ</a>
+			</div>
+		</div>
+		</div>
+		
+		<?php
 			endwhile;
+			
+			
+			
+			
+			
+			
+				
+//global $wp_query; // you can remove this line if everything works for you
+ 
+// don't display the button if there are not enough posts
+//if (  $wp_query->max_num_pages > 1 )
+	//echo '<div class="misha_loadmore">More posts</div>'; // you can use <a> as well
+
+		
+			
+			
+			
+			
+			
+			
+			
 
 			the_posts_navigation();
 
@@ -43,6 +91,16 @@ get_header(); ?>
 
 		endif; ?>
 
+		
+		
+		
+		</div>
+		</div>
+		</div>
+		</div>
+		
+		
+		
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
