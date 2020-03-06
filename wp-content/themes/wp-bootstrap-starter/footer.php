@@ -40,7 +40,7 @@
     else { $paged = 1; }
 $args = array(
     'post_type'=>'post', // Your post type name
-    'posts_per_page' => 3,
+    'posts_per_page' => 6,
 	'cat' => 0,
     'paged' => $paged,
 );
