@@ -1403,11 +1403,21 @@ body:not(.theme-preset-active) footer#colophon {
 
 header#masthead{
 	padding:0;
+	background-color:transparent;
 }
 
+
+
+#masthead .menu-full{
+	background-color:#ebd6c5;
+}
+	
 #masthead .sub-menu{
 	text-align:center;
-	
+	background-color:#2a2927;
+	color:white;
+	    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -1420,10 +1430,18 @@ header#masthead{
 	margin-left:20px;
 	margin-right:20px;
 	margin-top:30px;
+	text-align: center;
 }
+.text-label{
+	
+	font-family: Playfair-Italic;
+}
+
 #masthead p.text-label{
 	text-align:center;
 }
+
+
 
 #main-nav ul {
 	padding:0;
@@ -1437,12 +1455,44 @@ header#masthead{
 }
 
 
+.widget.widget_search input{
+	
+	background-color:transparent;
+	border-radius:0;
+	color:#7e7e7e;
+}
+.widget.widget_sub {
+	background-color:transparent;
+	border-radius:0;
+	color:#7e7e7e;
+	    width: 50%;
+    margin: 0 auto;
+}
 
+.subskrybuj-tekst{
+	
+	    margin-left: 151px;
+    margin-right: 150px;
+}
+.logo-top{
+    margin-left: 20px;
+    margin-top: 20px;
 
+}
 
+#menu-menu{
+	    font-family: Montserrat-Bold;
+		    letter-spacing: 5px;
+}
 
+.odstep{
+	
+    line-height: 1.9;
+}
 
-
+.social-ico{
+	    margin-top: 25px;
+}
 
 	/* ############################################## O NAS ################################################ */
 

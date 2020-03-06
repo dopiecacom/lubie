@@ -26,12 +26,12 @@
 	
 	
 	<header id="masthead" class="d-flex align-items-stretch bd-highlight <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
-      <div>
-	  <div class ="container">
-            <nav class="">
+      <div class ="menu-full">
+	  <div class ="menu-top">
+            <nav class="menu-top">
 
 <?php the_widget( 'WP_Widget_Search' ); ?>
-<p class ="text-label"> Tematy</p>
+<p class ="text-label tematy"> Tematy</p>
 
                 <?php
                 wp_nav_menu(array(
@@ -51,12 +51,12 @@
             </nav>
 			
 			<div class="sub-menu">
-			<p class ="text-label"> Subskrybuj</p>
-			<input >
-			
-			<a>privacy policy</a><br>
-			<a>kontakt</a><br>
-			<a>współpraca</a><br>
+			<p class ="text-label subskrybuj-tekst"> Subskrybuj</p>
+			<input class="widget widget_sub form-control">
+			</br>
+			<a class="odstep">privacy policy</a><br>
+			<a class="odstep">kontakt</a><br>
+			<a class="odstep">współpraca</a><br>
 			
 			
 			
@@ -75,7 +75,9 @@
 			</div>
 			
 		<div class ="main-image">
-	
+		<div class = "logo-top"><img src="/wp-content/uploads/img/logo_lubie.png">
+	</div>
+
 		</div>
 		
 	</header><!-- #masthead -->
