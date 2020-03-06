@@ -21,7 +21,7 @@ get_header(); ?>
 		<div id="kategoria">
 		
 		
-		<h6>WRÓĆ DO STRONY GŁÓWNEJ</h6>
+		<h6><a href="/">WRÓĆ DO STRONY GŁÓWNEJ</a></h6>
 		
 		
 		
@@ -83,11 +83,11 @@ get_header(); ?>
 			
 			
 
-			the_posts_navigation();
+			//the_posts_navigation();
 
-		else :
+		//else :
 
-			get_template_part( 'template-parts/content', 'none' );
+			//get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
 

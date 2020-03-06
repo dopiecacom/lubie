@@ -1263,6 +1263,10 @@ body:not(.theme-preset-active) footer#colophon {
 	#czytaj-wiecej{
 		color:#b07150;
 	}
+	
+	.post-thumbnail {
+    text-align: center;
+	}
 
 
 	/* ############################################## PARAGRAPH ################################################ */
@@ -1558,6 +1562,10 @@ margin-bottom: 80px;
 	width: 100%;
 }
 
+#kategoria{
+	text-align:center;
+}
+	
 #kategoria .row{
 	margin-bottom:80px;
 }
@@ -1572,7 +1580,7 @@ margin-bottom: 80px;
     padding-right: 13%;
 }
 
-#kategoria h6{
+#kategoria h6 a{
 	font-family: Myriard-Bold;
     color: #b07150;
     font-size: 15px;
@@ -1626,4 +1634,8 @@ margin-bottom: 80px;
 span.page-numbers.current {
     margin: 10px;
     font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
 }

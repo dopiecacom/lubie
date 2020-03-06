@@ -97,7 +97,7 @@ if ( $loop->have_posts() ) {
 ?><div id="pagination"><?php
         echo paginate_links(array(
             'base' => get_pagenum_link(1) . '%_%',
-            'format' => '/page/%#%',
+            'format' => '/page/%#%/#footer-upper-section',
             'current' => $current_page,
             'total' => $total_pages,
             'prev_text'    => __('« poprzednia strona'),

@@ -15,7 +15,13 @@ get_header(); ?>
 <div class="row">
 <!-- <div class="top-homepage-posts"> -->
 
-<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+<?php
+$args = array(
+    'posts_per_page' => 3,
+	'category_name' => 'uroda'
+);
+
+ $the_query = new WP_Query( $args ); ?>
  
 
 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>

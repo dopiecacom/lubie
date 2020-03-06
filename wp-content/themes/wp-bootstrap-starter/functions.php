@@ -374,7 +374,7 @@ function misha_loadmore_ajax_handler(){
 			//get_template_part( 'template-parts/post/content', get_post_format() );
 			//get_template_part( 'archive', get_post_format() );
 			// for the test purposes comment the line above and uncomment the below one
-			the_title();
+			//the_title();
 			
 			
 			
