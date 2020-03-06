@@ -1412,6 +1412,7 @@ header#masthead{
 .main-image{
 	background:url("/wp-content/uploads/img/mainbg.jpg");
 	width:100%;
+	    background-size: cover;
 }
 	
 .widget_search{
