@@ -81,7 +81,7 @@
 			</div>
 			
 		<div class ="main-image">
-		<div class = "logo-top"><img src="/wp-content/uploads/img/logo_lubie.png">
+		<div class = "logo-top"><a href="http://lubie.devintle.pl"><img src="/wp-content/uploads/img/logo_lubie.png"></a>
 	</div>
 
 		</div>
