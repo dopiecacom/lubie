@@ -1373,10 +1373,85 @@ body:not(.theme-preset-active) footer#colophon {
 
 
 
+/* ####################################### ##################################### */
+h1.entry-title {
+text-align:center;
+    margin: 0 260px;
+    margin-top: 70px;
+	    font-size: 2.71rem;
+		    margin-bottom: 90px;
+
+}
+
+.entry-author-image img{
+	border-radius:9999px;
+}
 
 
+.entry-footer .cat-links h6{
+	    text-align: center;
+		    margin-bottom: 70px;
+			
+}
+
+.entry-footer .cat-links a{
+font-family: Myriard-Bold;
+    color: #b07150;
+    font-size: 15px;
+    text-decoration: underline;
 
 
+}
+
+.data-posta{
+		text-align:center;
+
+}
+.data-posta a{
+	
+	color:black;
+	text-decoration:none;
+}
+
+.author.vcard a{
+	    font-size: 27px;
+    color: black;
+    font-weight: 600;
+}
+	
+
+	
+.entry-author-text h6{
+	display:inline;
+}
+
+.entry-author-text h6 a{
+	color:black;
+	    font-size: 11px;
+    text-transform: lowercase;
+		display:inline-block;
+		font-weight:100;
+}
+
+
+.entry-author-text h6 a:first-letter { 
+	text-transform: uppercase; 
+	
+	}
+	
+.entry-author-text .byline{
+	inline-block
+	margin-top:25px;
+}
+
+.entry-author-text	.entry-bold{
+	
+	font-weight:600;
+}
+
+#autorzy{
+	margin-top:50px;
+}
 
 	/* ############################################## INSTAGRAM ################################################ */
 

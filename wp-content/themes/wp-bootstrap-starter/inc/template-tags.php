@@ -7,6 +7,21 @@
  * @package WP_Bootstrap_Starter
  */
 
+if ( ! function_exists( 'wp_bootstrap_starter_posted_by' ) ) :
+
+function wp_bootstrap_starter_posted_by() {
+
+	$byline = sprintf(
+		esc_html_x( '%s', 'post author', 'wp-bootstrap-starter' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+
+	echo ' <span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+}
+
+endif;
+
+
 if ( ! function_exists( 'wp_bootstrap_starter_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -23,16 +38,13 @@ function wp_bootstrap_starter_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'wp-bootstrap-starter' ),
+		esc_html_x( '%s', 'post date', 'wp-bootstrap-starter' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'wp-bootstrap-starter' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span> | <span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo ' | <span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
@@ -54,7 +66,7 @@ function wp_bootstrap_starter_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'wp-bootstrap-starter' ) );
 		if ( $categories_list && wp_bootstrap_starter_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp-bootstrap-starter' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"><h6>' . esc_html__( '%1$s', 'wp-bootstrap-starter' ) . '</h6></span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -65,15 +77,15 @@ function wp_bootstrap_starter_entry_footer() {
 	}
 
 
-	edit_post_link(
+	/* edit_post_link(
 		sprintf(
-			/* translators: %s: Name of current post */
+			/ translators: %s: Name of current post /
 			esc_html__( 'Edit %s', 'wp-bootstrap-starter' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		' | <span class="edit-link">',
 		'</span>'
-	);
+	); */
 }
 endif;
 

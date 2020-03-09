@@ -7,5 +7,7 @@ jQuery( document ).ready(function() {
 	
 	jQuery(".widget_search .search-field").attr("placeholder","W Y S Z U K A J");
 	
+	jQuery("footer .cat-links a").text("WRÓC DO LISTY ARTYKUŁÓW");
+	
 
 });
