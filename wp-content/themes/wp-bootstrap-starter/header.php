@@ -52,7 +52,13 @@
 			
 			<div class="sub-menu">
 			<p class ="text-label subskrybuj-tekst"> Subskrybuj</p>
-			<input class="widget widget_sub form-control">
+			<div class="subskrybcja">
+			<div class="input-group">
+				<input class="widget widget_sub form-control" placeholder="T W Ó J  E M A I L"> 
+				
+				<button><i class="far fa-paper-plane"></i></button>
+			</div>
+			</div>
 			</br>
 			<a class="odstep">privacy policy</a><br>
 			<a class="odstep">kontakt</a><br>

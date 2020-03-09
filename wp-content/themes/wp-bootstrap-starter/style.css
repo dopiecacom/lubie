@@ -1455,12 +1455,25 @@ header#masthead{
 	text-transform:uppercase;
 }
 
+/* #main-nav ul li a:after { */
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 50%; */
+  /* height: 1px; */
+  /* background: #c00; */
+  /* content: ""; */
+  /* width: 100%; */
+  /* display: block; */
+/* } */
+
 
 .widget.widget_search input{
 	
 	background-color:transparent;
 	border-radius:0;
 	color:#7e7e7e;
+	    padding-right: 2rem;
+		font-weight: 600;
 }
 .widget.widget_sub {
 	background-color:transparent;
@@ -1469,15 +1482,49 @@ header#masthead{
 	    width: 50%;
     margin: 0 auto;
 }
+.subskrybcja{
+	
+margin-left:50px;
+margin-right:50px;
+}
+
+.subskrybcja input.widget_sub{
+	    padding-right: 2rem;
+		    text-align: center;
+    font-weight: 600;
+border-color: #ebd6c5;
+}
+	
+.subskrybcja button{
+	margin: 0;
+  margin-left: -1.8rem;
+    border: 0;
+    background-color: #ebd6c5;
+}
+
+.subskrybcja .far{
+color:gray;
+}
+
 
 .subskrybuj-tekst{
 	
-	    margin-left: 151px;
+	    margin-left: 90px;
+    margin-right: 90px;
+}
+
+@media screen and (min-width: 400px) {
+.subskrybuj-tekst{
+	
+	margin-left: 151px;
     margin-right: 150px;
 }
+}
+
 .logo-top{
     margin-left: 20px;
     margin-top: 20px;
+    margin-right: 20px;
 
 }
 
@@ -1495,6 +1542,20 @@ header#masthead{
 	    margin-top: 25px;
 }
 
+.social-ico i {
+    margin: 13px;
+}
+
+.search-submit{
+	    margin: 0;
+    margin-left: -2rem;
+    border: 0;
+    background-color: transparent;
+}
+
+.search-submit .fas{
+color:gray;
+}
 	/* ############################################## O NAS ################################################ */
 
 
