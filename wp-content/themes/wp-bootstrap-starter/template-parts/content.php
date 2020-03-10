@@ -123,10 +123,70 @@
 	<?php } ?>
 	
 	
+<?php if ( do_shortcode('[acf field="tytul_2"]') !== "")  { ?>
+	<div class="ankieta">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>	<?php echo do_shortcode('[acf field="tytul_2"]'); ?>   </p>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-10 offset-md-1">
+			<div class="inner-ankieta align-items-stretch">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="	<?php echo do_shortcode('[acf field="zdjecie_2"]'); ?> ">
+					</div>
 
+					<div class="col-md-6">
+
+						<div class="lubieto_button"><img src="/wp-content/uploads/img/button.png"></div>
+						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_2"]'); ?></div>
+						
+
+
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
 	
 	
-	
+	<?php if ( do_shortcode('[acf field="tytul_3"]') !== "")  { ?>
+	<div class="ankieta">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>	<?php echo do_shortcode('[acf field="tytul_3"]'); ?>   </p>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-10 offset-md-1">
+			<div class="inner-ankieta align-items-stretch">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="	<?php echo do_shortcode('[acf field="zdjecie_3"]'); ?> ">
+					</div>
+
+					<div class="col-md-6">
+
+						<div class="lubieto_button"><img src="/wp-content/uploads/img/button.png"></div>
+						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_3"]'); ?></div>
+						
+
+
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
 	
 	
 </article><!-- #post-## -->
