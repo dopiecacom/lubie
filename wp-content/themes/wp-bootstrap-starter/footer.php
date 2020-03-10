@@ -163,7 +163,7 @@ wp_reset_postdata();
 		
 		<div id="instagram">
 		<p>INSTAGRAM</p>
-		<?php echo do_shortcode('[instagram-feed user="lubietocompl"]'); ?>
+		<?php echo do_shortcode('[instagram-feed user="lubietocompl"]'); ?> 
 		
 		</div>
 		</div>

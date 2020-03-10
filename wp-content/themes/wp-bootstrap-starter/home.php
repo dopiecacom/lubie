@@ -13,6 +13,8 @@ get_header(); ?>
 		
 <div class="container">
 <div class="row">
+
+
 <!-- <div class="top-homepage-posts"> -->
 
 <?php
@@ -45,7 +47,7 @@ wp_reset_postdata();
 		</div>
 		</div>
 		
-		
+				<?php echo do_shortcode(' [acf field="zdjecie"]'); ?>
 		
 		
 		<!-- ####################################################################################### -->	

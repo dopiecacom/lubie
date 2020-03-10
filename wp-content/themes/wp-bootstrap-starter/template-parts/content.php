@@ -90,5 +90,43 @@
 	
 	
 	
+	<?php if ( do_shortcode('[acf field="tytul"]') !== "")  { ?>
+	<div class="ankieta">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>	<?php echo do_shortcode('[acf field="tytul"]'); ?>   </p>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-10 offset-md-1">
+			<div class="inner-ankieta align-items-stretch">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="	<?php echo do_shortcode('[acf field="zdjecie"]'); ?> ">
+					</div>
+
+					<div class="col-md-6">
+
+						<div class="lubieto_button"><img src="/wp-content/uploads/img/button.png"></div>
+						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis"]'); ?></div>
+						
+
+
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
+	
+	
+
+	
+	
+	
+	
 	
 </article><!-- #post-## -->
