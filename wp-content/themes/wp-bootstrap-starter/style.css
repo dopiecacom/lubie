@@ -1451,6 +1451,8 @@ font-family: Myriard-Bold;
 
 #autorzy{
 	margin-top:50px;
+	    margin-bottom: 50px;
+
 }
 
 	/* ############################################## INSTAGRAM ################################################ */
@@ -1793,7 +1795,6 @@ margin-bottom: 80px;
 	font-size: 18px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	margin-top:50px;
 	padding-bottom: 60px;
 }
 
