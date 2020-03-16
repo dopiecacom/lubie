@@ -6,10 +6,28 @@
 		*
 		* @package WP_Bootstrap_Starter
 	*/
-	
 ?>
 
+<?php 
+
+  if (isset($_POST['wynik'])) {
+		$count = (int) get_field('wynik' . '_' . $_POST['wynik']);
+		$count++;
+		echo 'wynik' . '_' . $_POST['wynik'];
+		
+		update_field('wynik' . '_' . $_POST['wynik'], $count);
+  }
+?>	
+		
+	<?php	$_POST = array();	?>		
+
+ 
+
+	
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+
 	<div class="post-thumbnail">
 		<?php // the_post_thumbnail(); ?>
 	</div>
@@ -107,9 +125,11 @@
 					</div>
 
 					<div class="col-md-6">
-
-						<div class="lubieto_button"><img src="/wp-content/uploads/img/button.png"></div>
-						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis"]'); ?></div>
+						<form method="post">
+						<input type="hidden" name="wynik" value="1">
+						<div class="lubieto_button"><button><img src="/wp-content/uploads/img/button.png"></button></div>
+						</form>
+						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis"]'); echo do_shortcode('[acf field="wynik_1"]'); ?></div>
 						
 
 
@@ -140,9 +160,11 @@
 					</div>
 
 					<div class="col-md-6">
-
-						<div class="lubieto_button"><img src="/wp-content/uploads/img/button.png"></div>
-						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_2"]'); ?></div>
+						<form method="post">
+						<input type="hidden" name="wynik" value="2">
+						<div class="lubieto_button"><button><img src="/wp-content/uploads/img/button.png"></button></div>
+						</form>
+						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_2"]'); echo do_shortcode('[acf field="wynik_2"]'); ?></div>
 						
 
 
@@ -153,7 +175,21 @@
 			</div>
 		</div>
 	</div>
-	<?php } ?>
+	<?php }	?>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	<?php if ( do_shortcode('[acf field="tytul_3"]') !== "")  { ?>
@@ -173,9 +209,11 @@
 					</div>
 
 					<div class="col-md-6">
-
-						<div class="lubieto_button"><img src="/wp-content/uploads/img/button.png"></div>
-						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_3"]'); ?></div>
+						<form method="post">
+						<input type="hidden" name="wynik" value="3">
+						<div class="lubieto_button"><button><img src="/wp-content/uploads/img/button.png"></button></div>
+						</form>
+						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_3"]'); echo do_shortcode('[acf field="wynik_3"]'); ?></div>
 						
 
 
@@ -186,7 +224,14 @@
 			</div>
 		</div>
 	</div>
-	<?php } ?>
+	<?php }	?>
+
 	
+<script>
+let myArray = [];
+let post_id  = '<?php echo get_the_ID(); ?>';
+myArray.push( post_id );
+</script>
+
 	
 </article><!-- #post-## -->
