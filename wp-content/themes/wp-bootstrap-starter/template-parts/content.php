@@ -217,11 +217,11 @@
 						<div class="lubieto_text">
 							<?php 
 							if ($check==false)
-								echo do_shortcode('[acf field="opis"]');
+								echo do_shortcode('[acf field="opis_2"]');
 							else
 							{
 								echo "WYNIK: ";
-								echo do_shortcode('[acf field="wynik_1"]');
+								echo do_shortcode('[acf field="wynik_2"]');
 							}								
 							?>
 						</div>
@@ -281,11 +281,11 @@
 						<div class="lubieto_text">
 							<?php 
 							if ($check==false)
-								echo do_shortcode('[acf field="opis"]');
+								echo do_shortcode('[acf field="opis_3"]');
 							else
 							{
 								echo "WYNIK: ";
-								echo do_shortcode('[acf field="wynik_1"]');
+								echo do_shortcode('[acf field="wynik_3"]');
 							}								
 							?>
 						</div>
