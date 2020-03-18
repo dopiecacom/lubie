@@ -9,20 +9,42 @@
 ?>
 
 <?php 
+	$post_id = get_the_ID();
+	$ip_adress = $_SERVER['REMOTE_ADDR'];
+	$check = apply_filters('check',$post_id, $ip_adress);
 
-  if (isset($_POST['wynik'])) {
+  if (isset($_POST['wynik']) && $check==false) {
+		do_action('voted',$post_id, $ip_adress);
 		$count = (int) get_field('wynik' . '_' . $_POST['wynik']);
 		$count++;
-		echo 'wynik' . '_' . $_POST['wynik'];
 		
 		update_field('wynik' . '_' . $_POST['wynik'], $count);
   }
 ?>	
 		
-	<?php	$_POST = array();	?>		
+	<?php
+	
+	$table_name = $wpdb->prefix . 'ankieta';
+    $wpdb_collate = $wpdb->collate;
+    $sql =
+         "CREATE TABLE IF NOT EXISTS {$table_name} (
+         id int auto_increment ,
+         ip_adress varchar(16),
+		 post_id int,
+		 date datetime default CURRENT_TIMESTAMP,
+		 PRIMARY KEY  (id)
+         )
+		 COLLATE {$wpdb_collate}";
+	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+    dbDelta( $sql , true );
+	?>
+	
+	
+	<?php
 
- 
 
+
+	?>
 	
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -108,6 +130,14 @@
 	
 	
 	
+	
+	<?php
+		$check = apply_filters('check',$post_id, $ip_adress);
+	?>
+	
+	
+	
+	
 	<?php if ( do_shortcode('[acf field="tytul"]') !== "")  { ?>
 	<div class="ankieta">
 		<div class="container">
@@ -127,9 +157,24 @@
 					<div class="col-md-6">
 						<form method="post">
 						<input type="hidden" name="wynik" value="1">
-						<div class="lubieto_button"><button><img src="/wp-content/uploads/img/button.png"></button></div>
+						<div class="lubieto_button">
+							<?php 
+							if ($check==false)
+								echo "<button><img src='/wp-content/uploads/img/button.png'></button>";
+							?>
+						</div>
 						</form>
-						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis"]'); echo do_shortcode('[acf field="wynik_1"]'); ?></div>
+						<div class="lubieto_text">
+							<?php 
+							if ($check==false)
+								echo do_shortcode('[acf field="opis"]');
+							else
+							{
+								echo "WYNIK: ";
+								echo do_shortcode('[acf field="wynik_1"]');
+							}								
+							?>
+						</div>
 						
 
 
@@ -159,12 +204,27 @@
 						<img src="	<?php echo do_shortcode('[acf field="zdjecie_2"]'); ?> ">
 					</div>
 
-					<div class="col-md-6">
+				<div class="col-md-6">
 						<form method="post">
 						<input type="hidden" name="wynik" value="2">
-						<div class="lubieto_button"><button><img src="/wp-content/uploads/img/button.png"></button></div>
+						<div class="lubieto_button">
+							<?php 
+							if ($check==false)
+								echo "<button><img src='/wp-content/uploads/img/button.png'></button>";
+							?>
+						</div>
 						</form>
-						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_2"]'); echo do_shortcode('[acf field="wynik_2"]'); ?></div>
+						<div class="lubieto_text">
+							<?php 
+							if ($check==false)
+								echo do_shortcode('[acf field="opis"]');
+							else
+							{
+								echo "WYNIK: ";
+								echo do_shortcode('[acf field="wynik_1"]');
+							}								
+							?>
+						</div>
 						
 
 
@@ -208,12 +268,27 @@
 						<img src="	<?php echo do_shortcode('[acf field="zdjecie_3"]'); ?> ">
 					</div>
 
-					<div class="col-md-6">
+						<div class="col-md-6">
 						<form method="post">
 						<input type="hidden" name="wynik" value="3">
-						<div class="lubieto_button"><button><img src="/wp-content/uploads/img/button.png"></button></div>
+						<div class="lubieto_button">
+							<?php 
+							if ($check==false)
+								echo "<button><img src='/wp-content/uploads/img/button.png'></button>";
+							?>
+						</div>
 						</form>
-						<div class="lubieto_text"><?php echo do_shortcode('[acf field="opis_3"]'); echo do_shortcode('[acf field="wynik_3"]'); ?></div>
+						<div class="lubieto_text">
+							<?php 
+							if ($check==false)
+								echo do_shortcode('[acf field="opis"]');
+							else
+							{
+								echo "WYNIK: ";
+								echo do_shortcode('[acf field="wynik_1"]');
+							}								
+							?>
+						</div>
 						
 
 
@@ -226,6 +301,8 @@
 	</div>
 	<?php }	?>
 
+	
+	
 	
 <script>
 let myArray = [];

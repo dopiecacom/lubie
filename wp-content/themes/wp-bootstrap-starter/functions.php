@@ -323,6 +323,47 @@ if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
 
 
 
+function ankieta_voted($post_id, $ip_adress){
+	global $wpdb;
+	$sql = $wpdb->insert('wp_ankieta', array('ip_adress' => $ip_adress,'post_id' => $post_id));
+}
+add_action( 'voted', 'ankieta_voted', 10, 2);
+
+function ankieta_check($post_id, $ip_adress){
+	global $wpdb;
+	$sql = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM `wp_ankieta` WHERE ip_adress = '$ip_adress' AND post_id = '$post_id'" ) );
+	if (isset($sql->id))
+		return true;
+	else
+		return false;
+}
+add_filter( 'check', 'ankieta_check', 10, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function wpdocs_custom_excerpt_length( $length ) {
 return 30;
 }
@@ -404,17 +445,7 @@ function misha_loadmore_ajax_handler(){
 		
 		
 		
-		
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
  
 		<?php

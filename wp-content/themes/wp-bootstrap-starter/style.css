@@ -1786,7 +1786,7 @@ margin-bottom: 80px;
 	/* ############################################## ANKIETA ################################################ */
 
 
-
+	
 
 .ankieta{
 	background-color:#ebd6c5;
@@ -1816,7 +1816,13 @@ margin-bottom: 80px;
 	position: absolute;
     bottom: -54px;
     right: 155px;
+	display:block;
 	
+}
+
+.lubieto_button button{
+    border: 0;
+    padding: 0;
 }
 
 .lubieto_text{
