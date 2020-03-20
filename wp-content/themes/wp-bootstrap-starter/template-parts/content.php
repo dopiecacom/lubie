@@ -8,20 +8,20 @@
 	*/
 ?>
 
-<?php 
-	$post_id = get_the_ID();
-	$ip_adress = $_SERVER['REMOTE_ADDR'];
-	$check = apply_filters('check',$post_id, $ip_adress);
+	<?php 
+		$post_id = get_the_ID();
+		$ip_adress = $_SERVER['REMOTE_ADDR'];
+		$check = apply_filters('check',$post_id, $ip_adress);
 
-  if (isset($_POST['wynik']) && $check==false) {
-		do_action('voted',$post_id, $ip_adress);
-		$count = (int) get_field('wynik' . '_' . $_POST['wynik']);
-		$count++;
-		
-		update_field('wynik' . '_' . $_POST['wynik'], $count);
-  }
-?>	
-		
+	  if (isset($_POST['wynik']) && $check==false) {
+			do_action('voted',$post_id, $ip_adress);
+			$count = (int) get_field('wynik' . '_' . $_POST['wynik']);
+			$count++;
+			
+			update_field('wynik' . '_' . $_POST['wynik'], $count);
+	  }
+	?>	
+	
 	<?php
 	
 	$table_name = $wpdb->prefix . 'ankieta';
